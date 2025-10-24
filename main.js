@@ -1,6 +1,7 @@
 import { notesData } from './notes-data.js';
 import './notes-item.js';
 import './note-form.js';
+import './footer.js'; 
 
 
 //input alert
@@ -88,7 +89,7 @@ function notesUpdate() {
 
 document.body.addEventListener('archive-note', (event) => {
   const noteId = event.detail.id;
-  const note = notesData.find(n => n.id === noteId);
+  const note = notesData.find(note => note.id === noteId);
   if (note) {
     note.archived = !note.archived; 
     activeContainer.innerHTML = '<h2>Daftar notessss</h2>';
@@ -99,7 +100,7 @@ document.body.addEventListener('archive-note', (event) => {
 
 document.body.addEventListener('delete-note', (event) => {
   const noteId = event.detail.id;
-  const index = notesData.findIndex(n => n.id === noteId);
+  const index = notesData.findIndex(note => note.id === noteId);
   if (index !== -1) {
     notesData.splice(index, 1); 
     refreshNotes();

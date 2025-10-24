@@ -116,7 +116,7 @@ note-form button {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px 2fr;
     background-color: rgb(255, 255, 255);
-    padding: 1rem 2rem 0 2rem;
+    padding: 1rem 2rem 3rem 2rem;
 }
 
 #notes-list h2 {
@@ -136,6 +136,18 @@ note-form button {
     padding: 1rem;
     border-radius: 8px;
     margin: 1rem;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word; 
+    overflow-wrap: anywhere;   
+}
+
+.note p {
+  max-height: 150px;         
+  overflow-y: auto;         
+  gap: 5px;
 }
 
 #archived-notes {
