@@ -6,7 +6,8 @@ last progress:
 - menambahkan cust element (form, item)
 
 next-todo:
-    - css: buat item tidak rusak ketika ada yang panjang banget
+    - noArchive jangan double 
+    - memindah item dari unarchive ke archive jangan sampe dobel
     - custom element satu lagi
 
 custom element: note item, item input, 

@@ -8,7 +8,6 @@
 .bitcount-grid-single {
   font-family: "Bitcount Grid Single", system-ui;
   font-optical-sizing: auto;
-  font-weight: 100;
   font-style: normal;
   font-variation-settings:
     "slnt" 0,
@@ -24,7 +23,6 @@ body {
 }
 
 header {
-    font-family: "Bitcount Grid Single", system-ui;
     height: 100px;
     align-content: center;
     background-color:rgb(255, 255, 255);
@@ -34,6 +32,9 @@ header {
 header h1 {
     width: auto;
     margin: 0 0 0 20px;
+    font-family: "Bitcount Grid Single", system-ui;
+    font-weight: 500;
+    font-size: 48px;
 }
 
 note-form {

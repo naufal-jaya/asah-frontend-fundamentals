@@ -80,24 +80,25 @@ function notesUpdate() {
   });
 
   if(!archivedContainer.querySelector('note-item')) {
-      console.log('babi');
       const noArchive = document.createElement('p');
       noArchive.innerText = 'Belum ada notes yang di-Archive!';
       archivedContainer.appendChild(noArchive);
   }
 }
 
-document.body.addEventListener('archive-note', (e) => {
-  const noteId = e.detail.id;
+document.body.addEventListener('archive-note', (event) => {
+  const noteId = event.detail.id;
   const note = notesData.find(n => n.id === noteId);
   if (note) {
     note.archived = !note.archived; 
-    refreshNotes();
+    activeContainer.innerHTML = '<h2>Daftar notessss</h2>';
+    archivedContainer.innerHTML = '<h2>Daftar notes ga kepake :)</h2>';
+    notesUpdate();
   }
 });
 
-document.body.addEventListener('delete-note', (e) => {
-  const noteId = e.detail.id;
+document.body.addEventListener('delete-note', (event) => {
+  const noteId = event.detail.id;
   const index = notesData.findIndex(n => n.id === noteId);
   if (index !== -1) {
     notesData.splice(index, 1); 
@@ -105,16 +106,4 @@ document.body.addEventListener('delete-note', (e) => {
   }
 });
 
-function refreshNotes() {
-  activeContainer.innerHTML = '<h2>Daftar notessss</h2>';
-  archivedContainer.innerHTML = '<h2>Daftar notes ga kepake :)</h2>';
-  notesUpdate();
-
-  if(!archivedContainer.querySelector('note-item')) {
-  console.log('babi');
-  const noArchive = document.createElement('p');
-  noArchive.innerText = 'Belum ada notes yang di-Archive!';
-  archivedContainer.appendChild(noArchive);
-}
-}
 

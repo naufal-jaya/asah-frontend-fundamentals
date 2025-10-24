@@ -24,7 +24,7 @@ class NoteForm extends HTMLElement {
     this.innerHTML = `
       <form>         
         <div id="titleInputWrapper">
-        <label for="title-input">Title</label>   
+        <label for="title-input"><strong>Title</strong> maks. 30</label>   
         <input 
           type="text" 
           required 
@@ -33,7 +33,7 @@ class NoteForm extends HTMLElement {
         </div>
         
         <div id="notesInputWrapper">
-        <label for="notes-input">Your note</label> 
+        <label for="notes-input"><strong>Your note</strong> maks. 100</label> 
         <textarea 
           required 
           id="notes-input" 
