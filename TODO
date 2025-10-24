@@ -1,0 +1,45 @@
+last progress:
+- formulir penambahan bsia deteksi maxlength dan ngubah dom
+- submit form
+- media query
+- menambahkan cust attr
+- menambahkan cust element (form, item)
+
+next-todo:
+    - css: buat item tidak rusak ketika ada yang panjang banget
+    - custom element satu lagi
+
+custom element: note item, item input, 
+
+````````````````````````
+Kriteria Wajib 1: Menampilkan Daftar Catatan dengan Baik
+Aplikasi harus menampilkan daftar catatan dari data dumi yang telah kami sediakan. Silakan buka tautan ini. Pastikan seluruh data yang disediakan tampil pada aplikasi dengan baik.
+
+Kriteria Wajib 2: Formulir Tambah Catatan
+Karena merupakan aplikasi pencatatan, Anda diminta untuk membuat sebuah formulir dengan spesifikasi berikut:
+Terdapat dua input yang merupakan judul dan isi (body) dari catatan.
+Gunakan tipe input yang sesuai dengan kebutuhan. Misalnya, untuk body gunakanlah <textarea>.
+
+Kriteria Wajib 3: CSS Grid sebagai Metode Layouting
+Gunakan CSS Grid minimal untuk menyusun layout dari daftar catatan yang ditampilkan. Untuk hal lain, Anda bisa menggunakan CSS Grid, Flexbox, atau teknik lainnya.
+
+Kriteria Wajib 4: Bangun Komponen UI dengan Web Component
+Minimal terdapat tiga penerapan custom element pada aplikasi yang Anda buat. Anda boleh menggunakan custom element pada komponen UI   manapun, misalnya item catatan, app bar, input catatan, dan lainnya.
+
+``````````````````````````
+Kriteria Opsional 1: Memiliki Tampilan yang Menarik
+Anda sangat disarankan agar membangun aplikasi seciamik mungkin. Anda bebas berkreasi sekreatif apa pun. Berikut adalah beberapa aspek yang bisa menjadi referensi Anda.
+
+Memiliki pemilihan warna yang cocok dan pas. Anda dapat mengambil referensi dari colorhunt.co.
+Memiliki tata letak elemen yang pas. Pastikan tidak ada konten yang bertumpuk.
+Penggunaan font yang mudah untuk dibaca.
+Penerapan padding dan margin yang pas.
+
+Kriteria Opsional 2: Menerapkan Realtime Validation pada Formulir
+Selain memiliki formulir yang baik, pengalaman pengguna yang baik juga penting. Salah satunya menerapkan realtime validation. Anda direkomendasikan menerapkan aspek ini, ya.
+
+Kriteria Opsional 3: Menerapkan Custom Attribute pada Custom Element
+Tidak hanya sekadar menggunakan custom element, agar memenuhi kriteria opsional ini, setidaknya Anda memiliki penanganan custom attribute pada penerapan custom element dan diterapkan pada dokumen HTML.
+
+Kriteria Opsional 4: Memiliki Tampilan yang Responsive di Berbagai Perangkat
+Aplikasi akan sangat bagus jika memiliki layout yang responsive untuk berbagai perangkat.
