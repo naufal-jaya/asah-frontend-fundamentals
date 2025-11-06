@@ -1,43 +1,56 @@
-last progress:
-- formulir penambahan bsia deteksi maxlength dan ngubah dom
-- submit form
-- media query
-- menambahkan cust attr
-- menambahkan cust element (form, item)
 
-next-todo:
 
-custom element: note item, item input, 
 
-````````````````````````
-Kriteria Wajib 1: Menampilkan Daftar Catatan dengan Baik
-Aplikasi harus menampilkan daftar catatan dari data dumi yang telah kami sediakan. Silakan buka tautan ini. Pastikan seluruh data yang disediakan tampil pada aplikasi dengan baik.
 
-Kriteria Wajib 2: Formulir Tambah Catatan
-Karena merupakan aplikasi pencatatan, Anda diminta untuk membuat sebuah formulir dengan spesifikasi berikut:
-Terdapat dua input yang merupakan judul dan isi (body) dari catatan.
-Gunakan tipe input yang sesuai dengan kebutuhan. Misalnya, untuk body gunakanlah <textarea>.
 
-Kriteria Wajib 3: CSS Grid sebagai Metode Layouting
-Gunakan CSS Grid minimal untuk menyusun layout dari daftar catatan yang ditampilkan. Untuk hal lain, Anda bisa menggunakan CSS Grid, Flexbox, atau teknik lainnya.
 
-Kriteria Wajib 4: Bangun Komponen UI dengan Web Component
-Minimal terdapat tiga penerapan custom element pada aplikasi yang Anda buat. Anda boleh menggunakan custom element pada komponen UI   manapun, misalnya item catatan, app bar, input catatan, dan lainnya.
+-----------------------------------------------------------------------------
+Kriteria Wajib 1: Pertahankan Kriteria Submission Sebelumnya
+Ini adalah lanjutan dari submission sebelumnya. Pastikan proyek yang telah Anda bangun masih memenuhi seluruh kriteria dari submission sebelumnya.
 
-``````````````````````````
-Kriteria Opsional 1: Memiliki Tampilan yang Menarik
-Anda sangat disarankan agar membangun aplikasi seciamik mungkin. Anda bebas berkreasi sekreatif apa pun. Berikut adalah beberapa aspek yang bisa menjadi referensi Anda.
+Kriteria Wajib 2: Memanfaatkan RESTful API sebagai Sumber Data
+Aplikasi harus memanfaatkan RESTful API yang telah kami sediakan sebagai sumber data. RESTful API yang digunakan adalah https://notes-api.dicoding.dev/v2. Dokumentasi API bisa Anda akses pada tautan tersebut.
 
-Memiliki pemilihan warna yang cocok dan pas. Anda dapat mengambil referensi dari colorhunt.co.
-Memiliki tata letak elemen yang pas. Pastikan tidak ada konten yang bertumpuk.
-Penggunaan font yang mudah untuk dibaca.
-Penerapan padding dan margin yang pas.
+Catatan
+Jika alamat di atas tidak dapat di akses, Anda bisa gunakan alternatif dokumentasi di tautan berikut: Dokumentasi Notes API V2 (Alternatif).
 
-Kriteria Opsional 2: Menerapkan Realtime Validation pada Formulir
-Selain memiliki formulir yang baik, pengalaman pengguna yang baik juga penting. Salah satunya menerapkan realtime validation. Anda direkomendasikan menerapkan aspek ini, ya.
+Ada beberapa fitur yang wajib Anda adopsi dengan API di atas.
 
-Kriteria Opsional 3: Menerapkan Custom Attribute pada Custom Element
-Tidak hanya sekadar menggunakan custom element, agar memenuhi kriteria opsional ini, setidaknya Anda memiliki penanganan custom attribute pada penerapan custom element dan diterapkan pada dokumen HTML.
+Membuat atau menambahkan catatan baru.
+Mendapatkan dan menampilkan daftar catatan.
+Menghapus catatan yang tersimpan.
+Catatan:
+Kriteria ini juga menyebabkan data local (data dumi) sudah tidak digunakan lagi. Silakan manfaatkan Notes API sebagai data utama aplikasi notesapp Anda.
 
-Kriteria Opsional 4: Memiliki Tampilan yang Responsive di Berbagai Perangkat
-Aplikasi akan sangat bagus jika memiliki layout yang responsive untuk berbagai perangkat.
+
+
+Kriteria Wajib 3: Menggunakan webpack sebagai Module Bundler
+Pengembangan aplikasi Notes App harus menggunakan webpack sebagai module bundler dengan spesifikasi berikut:
+
+Aplikasi harus menerapkan html-webpack-plugin dalam konfigurasinya.
+Aplikasi harus dapat dijalankan untuk fase development dengan perintah npm run start-dev dan memanfaatkan webpack-dev-server.
+Aplikasi harus dapat di-build untuk fase production dengan perintah npm run build.
+Kriteria Wajib 4: Menggunakan Fetch API
+Menggunakan Fetch API untuk melakukan Asynchronous JavaScript Request dalam berinteraksi dengan API https://notes-api.dicoding.dev/v2.
+
+Kriteria Wajib 5: Memiliki Indikator Loading
+Anda diwajibkan untuk menampilkan indikator loading saat melakukan proses request HTTP dalam menunggu hasilnya. Contohnya menampilkan indikator loading saat user sedang masuk aplikasi atau buat akun baru.
+
+Sebagai tips, Anda juga dapat membangun indikator loading menggunakan Web component.
+
+--------------------------------------------------------------------
+Kriteria Opsional 1: Memiliki Fitur Arsip Catatan
+Disarankan menerapkan fitur arsip (archive) catatan dalam aplikasi. Dokumentasi penerapannya dapat Anda simak di https://notes-api.dicoding.dev/v2.
+
+Kriteria Opsional 2: Menampilkan Feedback Saat Terjadi Error
+Proses request ke network ada kalanya terjadi kegagalan. Kami sangat menyarankan Anda untuk menampilkan pesan jika terjadi kegagalan. Anda dapat memanfaatkan Browser API seperti alert() method untuk menampilkan pesan gagal. Jika ingin, Anda dapat memanfaatkan library seperti sweetalert2.
+
+Kriteria Opsional 3: Memiliki Efek Pergerakan Halus atau Animasi
+Bagi user, aplikasi yang memiliki animasi yang halus akan menghilangkan rasa bosan. Anda dapat menerapkan efek ini dengan berbagai macam library pihak ketiga seperti animejs.com, motion.dev, gsap.com, atau lainnya.
+
+Kriteria Opsional 4: Menerapkan Prettier sebagai Code Formatter
+Anda disarankan untuk mengimplementasikan code formatter untuk merapikan karya tulisan kode Anda. Salah satu code formatter yang terkenal adalah Prettier. Cara pemasangan dan penggunaannya sangat mudah. Anda bisa menemukan panduannya di Prettier Install. Berikut contoh kode yang sudah dirapikan oleh Prettier.
+
+dos-92cb62e95449c23c9ce2f141fd8519d620231227091106.gif
+
+Jika ingin bereksplorasi konfigurasinya, silakan kunjungi Prettier Options. Pastikan prettier terdaftar dalam package.json dan Anda memiliki berkas konfigurasinya yang bernama .prettierrc sebagai bukti Anda mengerjakan kriteria ini.
