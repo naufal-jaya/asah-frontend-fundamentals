@@ -1,9 +1,14 @@
 
 last progress:
-- fetch api untuk event submit dan delete
+- benerin archive (gpt)
+- bikin webpack (gpt)
+- loading container (gpt)
+- feedback (gpt)
 
 next todo:
-- fetch api utk event archive supaya notes muncul di archived container
+- animasi 
+- prettier
+
 
 -----------------------------------------------------------------------------
 Kriteria Wajib 1: Pertahankan Kriteria Submission Sebelumnya
@@ -31,13 +36,14 @@ Pengembangan aplikasi Notes App harus menggunakan webpack sebagai module bundler
 Aplikasi harus menerapkan html-webpack-plugin dalam konfigurasinya.
 Aplikasi harus dapat dijalankan untuk fase development dengan perintah npm run start-dev dan memanfaatkan webpack-dev-server.
 Aplikasi harus dapat di-build untuk fase production dengan perintah npm run build.
+
 Kriteria Wajib 4: Menggunakan Fetch API
 Menggunakan Fetch API untuk melakukan Asynchronous JavaScript Request dalam berinteraksi dengan API https://notes-api.dicoding.dev/v2.
 
 Kriteria Wajib 5: Memiliki Indikator Loading
 Anda diwajibkan untuk menampilkan indikator loading saat melakukan proses request HTTP dalam menunggu hasilnya. Contohnya menampilkan indikator loading saat user sedang masuk aplikasi atau buat akun baru.
 
-Sebagai tips, Anda juga dapat membangun indikator loading menggunakan Web component.
+Sebagai tips, Anda juga dapat membangun indikator loading mengNgunakan Web component.
 
 --------------------------------------------------------------------
 Kriteria Opsional 1: Memiliki Fitur Arsip Catatan
