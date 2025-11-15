@@ -194,22 +194,27 @@ refreshNotes();
 document.body.addEventListener('archive-note', async (event) => {
     const noteId = event.detail.id;
     const note = notesData.find(note => note.id == noteId);
+
     showLoading();
 
     if (note) {
-        const targetStatus = !note.archived; 
-        const actionText = targetStatus ? 'mengarsip' : 'mengaktifkan';
+        const targetStatus = !note.archived;
 
-        const success = await archiveAPI(noteId, targetStatus); 
+        const success = await archiveAPI(noteId, targetStatus);
 
         if (success) {
+            const item = document.querySelector(`note-item[data-id="${noteId}"]`);
+            if (item) item.classList.add('moving');
+
             await refreshNotes();
-            hideLoading();
         } else {
-            alert(`Gagal ${actionText} catatan.`);
+            showError(`Gagal mengupdate status catatan.`);
         }
+
+        hideLoading();
     }
 });
+
 
 document.body.addEventListener('delete-note', async (event) => {
     const noteId = event.detail.id;
@@ -219,6 +224,8 @@ document.body.addEventListener('delete-note', async (event) => {
         await refreshNotes(); 
     }
 });
+
+
 
 function showLoading() {
     document.getElementById('loading-container').style.display = 'block';

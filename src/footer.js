@@ -1,7 +1,7 @@
 class CustFooter extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -9,17 +9,18 @@ class CustFooter extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['text'];
+    return ["text"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'text') {
+    if (name === "text") {
       this.render();
     }
   }
 
   render() {
-    const text = this.getAttribute('text') || 'naufaldzaki with Asah by Dicoding 2025';
+    const text =
+      this.getAttribute("text") || "naufaldzaki with Asah by Dicoding 2025";
     this.shadowRoot.innerHTML = `
       <style>
         :host {
@@ -56,4 +57,4 @@ class CustFooter extends HTMLElement {
   }
 }
 
-customElements.define('cust-footer', CustFooter);
+customElements.define("cust-footer", CustFooter);

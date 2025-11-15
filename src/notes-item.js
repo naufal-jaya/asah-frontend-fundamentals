@@ -28,7 +28,7 @@ class NoteItem extends HTMLElement {
           <button class="archive-btn"><img src="icons/archive.png" alt="archive"></button>
           <button class="delete-btn"><img src="icons/delete.png" alt="delete"></button>
         </div>
-      </div>
+    </div>
     `;
     this.querySelector('.archive-btn').addEventListener('click', () => {
       this.dispatchEvent(new CustomEvent('archive-note', {

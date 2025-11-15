@@ -1,6 +1,6 @@
 class NoteForm extends HTMLElement {
   static get observedAttributes() {
-    return ['max-title-length', 'max-body-length'];
+    return ["max-title-length", "max-body-length"];
   }
 
   constructor() {
@@ -11,15 +11,14 @@ class NoteForm extends HTMLElement {
     this.render();
   }
 
-
   attributeChangedCallback(name, oldValue, newValue) {
     console.log(name, oldValue, newValue);
     if (this.isConnected) this.render();
   }
 
   render() {
-    const maxTitle = this.getAttribute('max-title-length') || '';
-    const maxBody = this.getAttribute('max-body-length') || '';
+    const maxTitle = this.getAttribute("max-title-length") || "";
+    const maxBody = this.getAttribute("max-body-length") || "";
 
     this.innerHTML = `
       <form>         
@@ -29,7 +28,7 @@ class NoteForm extends HTMLElement {
           type="text" 
           required 
           id="title-input" 
-          ${maxTitle ? `maxlength="${maxTitle}"` : ''}>
+          ${maxTitle ? `maxlength="${maxTitle}"` : ""}>
         </div>
         
         <div id="notesInputWrapper">
@@ -37,14 +36,13 @@ class NoteForm extends HTMLElement {
         <textarea 
           required 
           id="notes-input" 
-          ${maxBody ? `maxlength="${maxBody}"` : ''}></textarea> 
+          ${maxBody ? `maxlength="${maxBody}"` : ""}></textarea> 
         </div>
         
         <button type="submit">Submit</button>
       </form>
     `;
-
   }
 }
 
-customElements.define('note-form', NoteForm);
+customElements.define("note-form", NoteForm);
